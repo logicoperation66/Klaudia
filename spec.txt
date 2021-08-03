@@ -1,0 +1,8 @@
+Głównym założeniem projektu jest stworzenie skryptu który zautomatyzuję proces
+ tworzenia zaleceń behawioralnych dla klientów ŻONY. Zalecenia to często seria
+ ćwiczeń, które sa indywidualnie dobieranie pod klienta i jego problem.
+ Program ma odczytywac z plików txt. Przygotowane wcześniej zalecenia i zapyta
+ uszyszkodnika które zalecenie chce dodać do swojego głównego dokumentu
+ wyjściowego.
+
+ Fajnie byłoby rozbudować program o wersje okienkową.
