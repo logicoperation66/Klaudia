@@ -12,11 +12,8 @@ number = files
 root = tkinter.Tk()
 
 def onClick(i):
-    choice =
-    path = files[choice - 1]
-        text = open(path, 'r')
-        f = open(final_filename, '+a')
-        f.writelines(f"\n...\n{text.read()}")
+    print(f"Przycisk :{i}")
+
 
 ##rec_check as list of recomendation check :>
 def rec_check():
@@ -24,7 +21,6 @@ def rec_check():
     for file in files:
         _file = open(file, 'r')
         napis = (f"Zalecenie nr.{n} \n{_file.read(50)}...")
-        # tkinter.Label(root, text=napis).pack(anchor='w')
         b = tkinter.Button(root, text=napis, command=lambda i=file: onClick(i))
         b.pack()
         n += 1
