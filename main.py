@@ -5,10 +5,11 @@ import glob
 files = glob.glob("Zalecenia/*.txt")
 n = 1
 
-### Printing list of files with some text to be sure what excersise is inside.
+### Printing list of files with some text to be sure what excersise is inside
+# the file.
 for file in files:
     __file = open(file, 'r')
-    print(f"Zalecenie nr.{n} \n{__file.read(50)}...\n")
+    print(f"{file}\n{__file.read(50)}...\n")
     n += 1
 
 prompt = "Podaj numer zalecenia które chcesz dodać do pliku głownego :"
@@ -23,13 +24,7 @@ final_filename = str(input(prompt2))
 # For example if I have 3 recomendation and i chose 4 i get err..
 # THIS NEED  TO BE DONE BETTER.
 while True:
-    while True:
-        try:
-            choice = int(input('Podaj liczbę :'))
-        except ValueError:
-            print('Podałeś niewłaściwe dane. Wpisz liczbę naturalną.')
-        else:
-            break
+    choice = int(input('Podaj liczbę :'))
     if choice == 0:
         print(f"Tworzenie pliku o nazwie {final_filename} gotowe.")
         break
@@ -39,6 +34,3 @@ while True:
         f = open(final_filename, '+a')
         f.writelines(f"\n...\n{text.read()}")
         print(f"Dodałeś zalecenie o nr.{choice}, Jeśli chcesz zakończyć wpisz 0")
-
-
-
