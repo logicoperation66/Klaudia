@@ -36,13 +36,15 @@ edit.pack()
 def entrybt1():
     filename = edit.get()
     final_file = open(filename, '+a')
-    return
+    return final_file
 
 def take():
     selected_list = [listbox.get(i) for i in listbox.curselection()]
     for _ in selected_list:
+        entrybt1()
         x = open(_, 'r')
-        f = open(, '+a')
+        f = entrybt1()
+        # f = open(final_name, '+a')
         f.writelines(f"\n...\n{x.read()}")
 
 
