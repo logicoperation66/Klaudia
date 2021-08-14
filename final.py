@@ -15,15 +15,6 @@ listbox_items = StringVar(value=files)
 listbox = Listbox(root, listvariable=listbox_items, width=50, height=10,
                   selectmode="multiple")
 listbox.pack()
-# Adding files to listbox
-
-# for file in files:
-#     _file = open(file)
-#     listbox.insert(END, _file.read(30))
-
-
-
-
 
 prompt = "Podaj nazwę dla pliku"
 label = Label(root, text=prompt)
@@ -47,14 +38,10 @@ def take():
         # f = open(final_name, '+a')
         f.writelines(f"\n...\n{x.read()}")
 
-
 bt1 = Button(root, text="Utwórz", command=entrybt1)
 bt1.pack()
 
 bt3 = Button(root, text='test', command=take)
 bt3.pack()
-
-
-
 
 root.mainloop()
