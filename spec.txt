@@ -5,4 +5,8 @@ Głównym założeniem projektu jest stworzenie skryptu który zautomatyzuję pr
  uszyszkodnika które zalecenie chce dodać do swojego głównego dokumentu
  wyjściowego.
 
- Fajnie byłoby rozbudować program o wersje okienkową.
+
+Windows 10 :
+    Aby uruchamiać skrypt należy utworzyć plik .bat ze ścieżką pythona i skryptu
+
+Do poprawki listowanie plików z folderu bo nic się nie dzieje.
