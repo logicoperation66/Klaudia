@@ -1,9 +1,11 @@
 from glob import *
 from tkinter import *
+from pathlib import Path
 import os
 
 # Using glob to take all .txt files into variable called "files"
-files = glob("Zalecenia/*.txt")
+# files = glob("Zalecenia/*.txt")
+glob_path = Path(r"C:")
 
 # Creating a tkinter window
 root = Tk()
