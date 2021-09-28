@@ -1,11 +1,12 @@
+import os
 from glob import *
 from tkinter import *
 from pathlib import Path
-import os
 
 # Using glob to take all .txt files into variable called "files"
 # files = glob("Zalecenia/*.txt")
-glob_path = Path(r"C:")
+path = r"/home/stinky/PycharmProjects/KlaudiaZalecenia/Zalecenia"
+files = os.listdir(path)
 
 # Creating a tkinter window
 root = Tk()
@@ -33,9 +34,9 @@ def entrybt1():
 
 def take():
     selected_list = [listbox.get(i) for i in listbox.curselection()]
-    for _ in selected_list:
+    for file in selected_list:
         entrybt1()
-        x = open(_, 'r')
+        x = open(file, 'r')
         f = entrybt1()
         # f = open(final_name, '+a')
         f.writelines(f"\n...\n{x.read()}")
