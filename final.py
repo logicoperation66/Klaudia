@@ -3,6 +3,21 @@ from glob import *
 from tkinter import *
 from pathlib import Path
 
+def take():
+    selected_list = [listbox.get(i) for i in listbox.curselection()]
+    for file in selected_list:
+        entrybt1()
+        x = open(file, 'r')
+        f = entrybt1()
+        # f = open(final_name, '+a')
+        f.writelines(f"\n...\n{x.read()}")
+
+# Adding button to create file with name from entry
+def entrybt1():
+    filename = edit.get()
+    final_file = open(filename, '+a')
+    return final_file
+
 # Using glob to take all .txt files into variable called "files"
 # files = glob("Zalecenia/*.txt")
 path = r"/home/stinky/PycharmProjects/KlaudiaZalecenia/Zalecenia"
@@ -26,20 +41,6 @@ label.pack()
 edit = Entry(root)
 edit.pack()
 
-# Adding button to create file with name from entry
-def entrybt1():
-    filename = edit.get()
-    final_file = open(filename, '+a')
-    return final_file
-
-def take():
-    selected_list = [listbox.get(i) for i in listbox.curselection()]
-    for file in selected_list:
-        entrybt1()
-        x = open(file, 'r')
-        f = entrybt1()
-        # f = open(final_name, '+a')
-        f.writelines(f"\n...\n{x.read()}")
 
 bt1 = Button(root, text="Utwórz", command=entrybt1)
 bt1.pack()
