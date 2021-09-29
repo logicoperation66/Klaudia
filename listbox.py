@@ -3,14 +3,14 @@ import os
 
 def searchfiles(extension='.txt', folder='/home/stinky/PycharmProjects/KlaudiaZalecenia/Zalecenia'):
     "insert all files in the listbox"
-    for r, d, f in os.walk(folder):
+    for r , d, f in os.walk(folder):
         for file in f:
             if file.endswith(extension):
                 lb.insert(0, r + "\\" + file)
 
 
 def open_file():
-    os.startfile(lb.get(lb.curselection()[0]))
+    os.open(lb.get(lb.curselection()[0]))
 
 root = tk.Tk()
 root.geometry("400x400")
