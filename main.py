@@ -9,7 +9,7 @@ n = 1
 # the file.
 for file in files:
     __file = open(file, 'r')
-    print(f"{file}\n{__file.read(50)}...\n")
+    print(f"{file}\n{__file.read(10)}...\n")
     n += 1
 
 prompt = "Podaj numer zalecenia które chcesz dodać do pliku głownego :"
