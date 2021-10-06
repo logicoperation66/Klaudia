@@ -1,3 +1,24 @@
+final.py
+W celu odpalenia apki na windowsie należy przejść do folderu aplikacji i
+utowrzyć środowisko wirtualne za pomocą polecenia
+    python -m venv env
+Następnie przechodzimy do srodowiska wirtualnego i w katalogu Scripts szukamy
+pliku activate.bat
+Edytujemy plik i dodajemy na końcu ścieżkę:
+    python "ścieżka do final.py"
+Do tego samego folderu najlepiej skopiować folder Zalecenia i utowrzyć skróty na
+ pulpicie activate i Zalecenia.
+
+
+
+
+
+
+
+
+
+
+
 Głównym założeniem projektu jest stworzenie skryptu który zautomatyzuję proces
  tworzenia zaleceń behawioralnych dla klientów ŻONY. Zalecenia to często seria
  ćwiczeń, które sa indywidualnie dobieranie pod klienta i jego problem.
@@ -10,3 +31,9 @@ Windows 10 :
     Aby uruchamiać skrypt należy utworzyć plik .bat ze ścieżką pythona i skryptu
 
 Do poprawki listowanie plików z folderu bo nic się nie dzieje.
+
+
+
+
+
+final.py
