@@ -3,9 +3,12 @@ from tkinter import *
 from pathlib import Path
 import os
 
+
 # Using glob to take all .txt files into variable called "files"
-# files = glob("Zalecenia/*.txt")
-glob_path = Path(r"C:")
+files = glob("Zalecenia/*.txt")
+
+### Wersja windows Kladia.
+
 
 # Creating a tkinter window
 root = Tk()
@@ -17,6 +20,12 @@ listbox_items = StringVar(value=files)
 listbox = Listbox(root, listvariable=listbox_items, width=50, height=10,
                   selectmode="multiple")
 listbox.pack()
+# Adding files to listbox
+
+# for file in files:
+#     _file = open(file)
+#     listbox.insert(END, _file.read(30))
+
 
 prompt = "Podaj nazwę dla pliku"
 label = Label(root, text=prompt)
@@ -28,7 +37,7 @@ edit.pack()
 # Adding button to create file with name from entry
 def entrybt1():
     filename = edit.get()
-    final_file = open(filename, '+a')
+    final_file = open(f"Zalecenia/{filename}", 'a')
     return final_file
 
 def take():
@@ -40,10 +49,14 @@ def take():
         # f = open(final_name, '+a')
         f.writelines(f"\n...\n{x.read()}")
 
-bt1 = Button(root, text="Utwórz", command=entrybt1)
+
+bt1 = Button(root, text="Utwórz plik", command=entrybt1)
 bt1.pack()
 
-bt3 = Button(root, text='test', command=take)
+bt3 = Button(root, text='Wstaw wybrane', command=take)
 bt3.pack()
+
+
+
 
 root.mainloop()
